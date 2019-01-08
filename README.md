@@ -22,8 +22,10 @@ Building
 
 To build the sender and receiver:
 
-  gcc sender.c -o sender
-  gcc receiver.c -o receiver
+```
+gcc sender.c -o sender
+gcc receiver.c -o receiver
+```
 
 Running
 -------
@@ -31,27 +33,33 @@ Running
 To run, pick a seldom used file that an unprivileged process can open
 read-only. /etc/passwd works well. Start the receiver in one terminal:
 
-  ./receiver /etc/passwd
+```
+./receiver /etc/passwd
+```
 
 Then run the sender in a separate terminal with a message to send:
 
-  ./sender /etc/passwd "Hello, World!"
+```
+./sender /etc/passwd "Hello, World!"
+```
 
 You should see the following in the receiver terminal:
 
-  Byte: H
-  Byte: e
-  Byte: l
-  Byte: l
-  Byte: o
-  Byte: ,
-  Byte:
-  Byte: W
-  Byte: o
-  Byte: r
-  Byte: l
-  Byte: d
-  Byte: !
+```
+Byte: H
+Byte: e
+Byte: l
+Byte: l
+Byte: o
+Byte: ,
+Byte:
+Byte: W
+Byte: o
+Byte: r
+Byte: l
+Byte: d
+Byte: !
+```
 
 Impact
 ------
